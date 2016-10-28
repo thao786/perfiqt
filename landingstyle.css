@@ -1,0 +1,69 @@
+
+h6{
+  font-size: 15px;
+  font-weight: normal;
+}
+h1{
+  font-family: 'Open Sans', serif;
+  font-size:32px;
+}
+.btn-blue{
+  background: #1973b9;
+  padding: 12px 45px;
+  border: 1px;
+  color:white;
+}
+.btn.outline {
+    background: none;
+    padding: 5px 15px;
+}
+.btn-primary.outline {
+    border: 2px solid #0099cc;
+    color: #0099cc;
+}
+.questiondiv{
+  background-color: #83b9dc;
+  color:white;
+  text-align: center;
+}
+.waydiv{
+  text-align: center;
+}
+.threeduck{
+  text-align: center;
+}
+.moptionbox{
+	display: table-cell;
+	vertical-align: middle;
+	text-align:center;
+	border: solid 1px #dadbdd;
+	padding:60px 50px;
+}
+.moptionbox:hover{
+	background-color: #006fc0;
+	color:white;
+}
+.landingfoot{
+  color:white;
+  background-color: #46586c;
+  background-image: url("imag/6.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.footform input,button{
+  margin-top:10px;
+  height:40px;
+}
+.footform a{
+  color:#7294b0;
+}
+.testifoot{
+  background-color: #4e657c;
+  padding:20px;
+  border-radius: 10px;
+}
+.rowQuestion {
+  background-color:white;
+  box-shadow:2px 12px 50px #888888; 
+  padding:20px;
+}
