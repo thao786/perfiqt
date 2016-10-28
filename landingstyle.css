@@ -1,11 +1,23 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600';
 
-h6{
-  font-size: 15px;
-  font-weight: normal;
+
+h2,h4,h5,p{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+h3{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
 }
 h1{
-  font-family: 'Open Sans', serif;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
   font-size:32px;
+}
+h6{
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
 }
 .btn-blue{
   background: #1973b9;
@@ -71,15 +83,23 @@ h1{
   text-align: center;
   border-radius: 50%;
 }
+.quesnum2{
+  background-color: #7fb7df;
+  color:white;
+  padding:20px 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
 .quesbox{
   background-color: #f7f7f7;
   border: 5px solid white;
   text-align: center;
   padding:10px;
 }
-.rowQuestion {
+.rowQuestion, .rowQuestion2 {
   background-color:white;
-  box-shadow:2px 12px 50px #888888; 
+  box-shadow:2px 26px 50px #888888;
   padding:20px;
 }
 .boardMember {

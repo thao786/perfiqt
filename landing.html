@@ -175,10 +175,10 @@
         <div class="col-sm-8 col-sm-offset-2">
           <h1 class="text-center">The <span class="text-primary">per</span><span class="text-danger">fi</span><span class="text-warning">qt</span> story</h1>
           <br>
-          <p class="text-center text-iprimary">A team of great professionals built revolutionary artificial intelligence for financial advisors... but decided to bring it directly to consumers instead.</p>
+          <p class="text-center text-primary">A team of great professionals built revolutionary artificial intelligence for financial advisors... but decided to bring it directly to consumers instead.</p>
           <br><br>
 
-          <div class="row">
+          <p class="text-center">
             <img src="team/Adamo_D.jpg" class="boardMember" name="Adamo De Napoli" job="Financial Advisor">
             <img src="team/Eric_D.jpg" class="boardMember" name="Eric D" job="Lawyer">
             <img src="team/Jacen_C.jpg" class="boardMember" name="Jacen C" job="Software Developer">
@@ -193,16 +193,26 @@
             <img src="team/Guillaume_P.jpg" class="boardMember" name="Guillaume P" job="Supply Chain">
             <img src="team/Jimmy_B.jpg" class="boardMember" name="Jimmy B" job="Chief Operating Officer">
             <img src="team/Paul_G.jpg" class="boardMember" name="Paul G" job="Juggler">
+          </p>
+        </div>
+      </div>
+
+      <br><br>
+
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+          <div id="teamInfo" class="row rowQuestion2">
+            <h2 class="text-center member-name">Adamo De Napoli</h1><br>
+            <h3 class="text-center text-primary member-job">Financial Advisor</h2>
+              <span class="quesnum2 glyphicon glyphicon-chevron-left" aria-hidden="true" style="position: absolute;
+    right: 96%; top: 8%;"></span>
+              <span class="quesnum2 glyphicon glyphicon-chevron-right" aria-hidden="true" style="position: absolute;
+    left: 96%; top: 8%;"></span>
           </div>
 
-          <div id="teamInfo" class="row">
-            <h1 class="text-center member-name">Adamo De Napoli</h1><br>
-            <h2 class="text-center member-job">Financial Advisor</h2>
-          </div>
+          <br><br><br><br>
 
-
-
-          <br>
+          <img src="imag/ok.png" class="img-responsive"><br><br>
           <p class="text-center">Hover to find out more about each dates</p>
 
           <br><br><br>
@@ -319,6 +329,8 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
 
     <br><Br><br>
 
@@ -330,7 +342,7 @@
           <div class="col-sm-8 col-sm-offset-2">
             <div class="row">
               <div class="col-sm-6">
-                <h6>Save yourself same typing</h6>
+                <h6>Save yourself some typing</h6>
                 <button class="btn btn-block btn-primary">Sign up using Facebook</button>
                 <button class="btn btn-block btn-danger">Sign up using Google account</button>
               </div>
@@ -352,7 +364,8 @@
         <div class="row">
           <div class="col-sm-4 col-sm-offset-4">
             <div class="testifoot">
-              <p> A team of great professionals built revolutionary artificial intelligence for financial advisors... but decided to bring it directly to consumers instead.</p>
+              <img src="imag/cap.png" width="60" style="float:left; position:absolute; right:90%; top:20%">
+              <p style="padding-left:55px;"> A team of great professionals built revolutionary artificial intelligence for financial advisors... <br><br>but decided to bring it directly to consumers instead.</p>
             </div>
             <p class="text-center">or</p>
             <button class="btn btn-block btn-info">Contact us</button>
@@ -386,6 +399,6 @@ $(".boardMember").hover(function() {
     $("#teamInfo .member-name").html($(this).attr('name'));
     $("#teamInfo .member-job").html($(this).attr('job'));
 });
-</script>      
+</script>
 </body>
 </html>
