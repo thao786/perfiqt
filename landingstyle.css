@@ -33,15 +33,15 @@ h1{
   text-align: center;
 }
 .moptionbox{
-	display: table-cell;
-	vertical-align: middle;
-	text-align:center;
-	border: solid 1px #dadbdd;
-	padding:60px 50px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align:center;
+  border: solid 1px #dadbdd;
+  padding:60px 50px;
 }
 .moptionbox:hover{
-	background-color: #006fc0;
-	color:white;
+  background-color: #006fc0;
+  color:white;
 }
 .landingfoot{
   color:white;
@@ -61,6 +61,21 @@ h1{
   background-color: #4e657c;
   padding:20px;
   border-radius: 10px;
+}
+.quesnum{
+  background-color: #7fb7df;
+  color:white;
+  padding:20px 24px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50%;
+}
+.quesbox{
+  background-color: #f7f7f7;
+  border: 5px solid white;
+  text-align: center;
+  padding:10px;
 }
 .rowQuestion {
   background-color:white;
