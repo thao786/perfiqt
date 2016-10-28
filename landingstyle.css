@@ -67,3 +67,7 @@ h1{
   box-shadow:2px 12px 50px #888888; 
   padding:20px;
 }
+.boardMember {
+  width: 50px;
+  opacity: 0.5;
+}

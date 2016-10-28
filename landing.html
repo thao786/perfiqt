@@ -175,8 +175,26 @@
           <br>
           <p class="text-center text-iprimary">A team of great professionals built revolutionary artificial intelligence for financial advisors... but decided to bring it directly to consumers instead.</p>
           <br><br>
-          <img class="img-responsive" src="imag/4.png">
-          <br>
+          
+          <div class="row">
+            <img src="team/Adamo_D.jpg" class="boardMember">
+            <img src="team/Eric_D.jpg" class="boardMember">
+            <img src="team/Jacen_C.jpg" class="boardMember">
+            <img src="team/Michael_V.jpg" class="boardMember">
+            <img src="team/Ralph_N.jpg" class="boardMember">
+            <img src="team/Bill_A.jpg" class="boardMember">
+            <img src="team/Gene_K.jpg" class="boardMember">
+            <img src="team/JeanRene_A.jpg" class="boardMember">
+            <img src="team/Mike_A.jpg" class="boardMember">
+            <img src="team/Yannik_S.jpg" class="boardMember">
+            <img src="team/Bruno_R.jpg" class="boardMember">
+            <img src="team/Guillaume_P.jpg" class="boardMember">
+            <img src="team/Jimmy_B.jpg" class="boardMember">
+            <img src="team/Paul_G.jpg" class="boardMember">
+          </div>
+
+
+          <br><br>
           <p class="text-center">Hover to find out more about each dates</p>
 
           <br><br><br>
@@ -281,12 +299,10 @@
 var currentQuestion = 0;
 var totalQuestions = $('.rowQuestion').length;
 
-$( "#nextQuestion" ).click(function() {
+$("#nextQuestion").click(function() {
 	$( "#q" + currentQuestion).fadeOut();
 	currentQuestion = (currentQuestion + 1) % totalQuestions;
-	for(var i =0; i< totalQuestions; i++) {
-		$( "#q" + i).hide();
-	}
+	$('.rowQuestion').hide();
 	$( "#q" + currentQuestion).fadeIn(1500, 'linear');
 });
 </script>
