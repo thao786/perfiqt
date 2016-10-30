@@ -454,9 +454,10 @@ h6{
   text-align:center;
   border: solid 1px #dadbdd;
   padding:60px 50px;
+  transition: background-color 1s ease;
 }
 .moptionbox:hover{
-  background-color: #006fc0;
+  background-color: #83b9dc;
   color:white;
 }
 .landingfoot{

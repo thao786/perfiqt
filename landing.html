@@ -188,9 +188,9 @@
       <div class="row">
       <br>
         <div class="col-sm-8 col-sm-offset-2">
-          <h1 id="the-p-story" class="text-center">The <span class="text-primary">per</span><span class="text-danger">fi</span><span class="text-warning">qt</span> story</h1>
+          <h1 id="the-p-story" class="text-center">The <span class="text-blue">per</span><span class="text-red">fi</span><span class="text-yellow">qt</span> story</h1>
           <br>
-          <p class="text-center text-primary">A team of great professionals built revolutionary artificial intelligence for financial advisors... but decided to bring it directly to consumers instead.</p>
+          <p class="text-center text-primary">A team of great professionals built revolutionary artificial intelligence for financial advisors... but<br> decided to bring it directly to consumers instead.</p>
           <br><br>
 
           <p id="advisorList" class="text-center">
@@ -227,7 +227,12 @@
 
           <br><br><br><br>
 
-          <img id="milestone" src="imag/ok.png" class="img-responsive"><br><br>
+          <div id="milestone">
+            <img src="imag/ok1.png" info="oct 2013">
+            <img src="imag/ok2.png" info="dec 2015">
+            <img src="imag/ok3.png" info="feb 2016">
+            <img src="imag/ok4.png" info="may 2016"><br><br>
+          </div>
           <p id="dateInfo" class="text-center">Hover to find out more about each dates</p>
 
           <br><br><br>
@@ -363,8 +368,8 @@
               </div>
               <div class="col-sm-6">
                 <form class="footform">
-                  <input type="text" class="form-control" id="email" placeholder="Email">
-                  <input type="email" class="form-control" id="pwd" placeholder="Password">
+                  <input type="email" class="form-control" id="email" placeholder="Email">
+                  <input type="password" class="form-control" id="pwd" placeholder="Password">
                   <button type="submit" class="btn btn-info btn-block">Get started</button>
                 </form>
                 <br>
@@ -416,13 +421,9 @@ $("#advisorList img").hover(function() {
     $("#teamInfo .member-job").html($(this).attr('job'));
 });
 
-$(".moptionbox").click(function() {
-  $( this ).fadeOut();
-  $( this ).fadeIn();
-  $( this ).html('<h4><b>'+ $( this ).attr('answer') + '</b></h4>');
-});
-
-$(".moptionbox").hover(function() {}, 
+$(".moptionbox").hover(function() {
+      $( this ).html('<h4><b>'+ $( this ).attr('answer') + '</b></h4>');
+    }, 
     function() {
       $( this ).html('<h4><b>'+ $( this ).attr('question') + '</b></h4>');
 });
@@ -453,25 +454,8 @@ $(".quesbox").hover(function() {
       $( this ).css('opacity', '1');
 });
 
-$("#milestone").hover(function(event) {
-      var img = document.getElementById('milestone'); 
-      var width = img.clientWidth;
-      var screenW = window.innerWidth;
-      var side = (screenW-width)/2;
-      var clicked = event.pageX;
-      var size = clicked - side; // how far in picture has I clicked?
-
-      // console.log(size);
-
-      if (size < 100)
-        $("#dateInfo").html('info about Oct 2013');
-      else if (size < 284) 
-        $("#dateInfo").html('info about Dec 2015');
-      else if (size < 330) 
-        $("#dateInfo").html('info about Feb 2016');
-      else
-        $("#dateInfo").html('info about May 2016');
-
+$("#milestone img").hover(function(event) {
+      $("#dateInfo").html($( this ).attr('info'));
     }, 
     function() {
       $("#dateInfo").html('Hover to find out more about each dates');
@@ -481,7 +465,7 @@ var currentAdvisor = 0;
 var totalAdvisors = $(".boardMember").length;
 
 $(".glyphicon-chevron-left").click(function() {
-  currentAdvisor = (currentAdvisor + 12) % totalAdvisors;
+  currentAdvisor = (currentAdvisor -1 + totalAdvisors) % totalAdvisors;
   advisorImg= $(".boardMember").eq(currentAdvisor);
   $(".boardMember").css('opacity', '0.5');
   advisorImg.css('opacity', '1');
@@ -509,14 +493,32 @@ $(".glyphicon-chevron-right").click(function() {
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title" id="myModalLabel">Sign up and get answers to your questions</h4>
+        <p>... and welcome to the family :-)</p>
       </div>
       <div class="modal-body">
-        ...
+        <div class="col-sm-8 col-sm-offset-2">
+            <div class="row">
+              <div class="col-sm-6">
+                <h6>Save yourself some typing</h6>
+                <button class="btn btn-block btn-primary">Sign up using Facebook</button>
+                <button class="btn btn-block btn-danger">Sign up using Google account</button>
+              </div>
+              <div class="col-sm-6">
+                <form class="footform">
+                  <input type="email" class="form-control" id="email" placeholder="Email">
+                  <input type="password" class="form-control" id="pwd" placeholder="Password">
+                  <button type="submit" class="btn btn-info btn-block">Get started</button>
+                </form>
+                <br>
+                <p>Already have an account? <a href="">Log In</a></p>
+              </div>
+            </div>
+          </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+          2.240 people are already using Perfiqt, now it's your turn.
+          << Not sure where I'd be today with Perfiqt, Love it!>>
       </div>
     </div>
   </div>
