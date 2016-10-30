@@ -212,8 +212,8 @@
 
           <br><br><br><br>
 
-          <img src="imag/ok.png" class="img-responsive"><br><br>
-          <p class="text-center">Hover to find out more about each dates</p>
+          <img id="milestone" src="imag/ok.png" class="img-responsive"><br><br>
+          <p id="dateInfo" class="text-center">Hover to find out more about each dates</p>
 
           <br><br><br>
 
@@ -423,6 +423,42 @@ $(".quesbox").click(function() {
       }
     });
   });
+});
+
+$(".moptionbox").hover(function() {}, 
+    function() {
+      $( this ).html('<h4><b>'+ $( this ).attr('question') + '</b></h4>');
+});
+
+$(".quesbox").hover(function() {
+      $( this ).css('opacity', '0.5');
+    }, 
+    function() {
+      $( this ).css('opacity', '1');
+});
+
+$("#milestone").hover(function(event) {
+      var img = document.getElementById('milestone'); 
+      var width = img.clientWidth;
+      var screenW = window.innerWidth;
+      var side = (screenW-width)/2;
+      var clicked = event.pageX;
+      var size = clicked - side; // how far in picture has I clicked?
+
+      // console.log(size);
+
+      if (size < 100)
+        $("#dateInfo").html('info about Oct 2013');
+      else if (size < 284) 
+        $("#dateInfo").html('info about Dec 2015');
+      else if (size < 330) 
+        $("#dateInfo").html('info about Feb 2016');
+      else
+        $("#dateInfo").html('info about May 2016');
+
+    }, 
+    function() {
+      $("#dateInfo").html('Hover to find out more about each dates');
 });
 </script>
 </body>
