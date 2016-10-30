@@ -10,6 +10,7 @@
     <link rel="icon" href="../../favicon.ico">
 
     <script src="jquery.js"></script>
+    <script src="jquery-ui.js"></script>
     <title>Perfiqt Homepage</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="landingstyle.css" rel="stylesheet">
@@ -400,6 +401,8 @@ $(".boardMember").hover(function() {
 });
 
 $(".moptionbox").click(function() {
+  $( this ).fadeOut();
+  $( this ).fadeIn();
   $( this ).html('<h4><b>'+ $( this ).attr('answer') + '</b></h4>');
 });
 
@@ -409,14 +412,17 @@ $(".moptionbox").hover(function() {},
 });
 
 $(".quesbox").click(function() {
-  if ($( this ).attr("class").indexOf('correct') < 0) {
-    $( this ).find( '.quesnum' ).css("background-color", "red");
-    $( this ).find( '.quesnum' ).html("x");
-  } else {
-    $( this ).find( '.quesnum' ).css("background-color", "green");
-    $( this ).find( '.quesnum' ).html("v");
-  }
-
+  $( this ).fadeOut( "fast", function() {
+    $( this ).fadeIn( "fast", function() {
+      if ($( this ).attr("class").indexOf('correct') < 0) {
+        $( this ).find( '.quesnum' ).css("background-color", "#c9302c");
+        $( this ).find( '.quesnum' ).html("x");
+      } else {
+        $( this ).find( '.quesnum' ).css("background-color", "green");
+        $( this ).find( '.quesnum' ).html("V");
+      }
+    });
+  });
 });
 </script>
 </body>
