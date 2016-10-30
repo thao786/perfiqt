@@ -11,6 +11,8 @@
 
     <script src="jquery.js"></script>
     <script src="jquery-ui.js"></script>
+    <script src="jquery.scrollify.min.js"></script>
+    <script src="index.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>Perfiqt Homepage</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -43,19 +45,31 @@
       <br><br>
 
       <div class="row">
-      	<div class="col-sm-6 col-sm-offset-3">
-      		<img src="imag/landing1.png" class="img-responsive"><br>
+      	<div id="post-it-section" class="col-sm-6 col-sm-offset-3 full-page center">
+      		<div class="row">
+              <div class="col-md-4"><div class="postit postit-blue center"><img src="imag/postit1.png"/></div></div>
+              <div class="col-md-4"><div class="postit postit-red center"><img src="imag/postit2.png"/></div></div>
+              <div class="col-md-4"><div class="postit postit-yellow center"><img src="imag/postit3.png"/></div></div>
+          </div>
+          <div class="row">
+              <div class="col-md-4"><div class="postit postit-red center"><img src="imag/postit4.png"/></div></div>
+              <div class="col-md-4"><div class="postit postit-yellow center"><img src="imag/postit5.png"/></div></div>
+              <div class="col-md-4"><div class="postit postit-blue center"><img src="imag/postit6.png"/></div></div>
+          </div><br>
           <br>
           <h4 class="text-center">Get answers to your <span class="text-primary">per</span>sonal <span class="text-danger">fi</span>nancial <span class="text-warning">q</span>ues<span class="text-warning">t</span>ions<br> Fast. Easy. Free</h4>
           <br>
-          <div class="center-block search-mp">
-            <div class="input-group" style="max-width: 500px;">
-              <input type="text" class="form-control" placeholder="Enter Your Email" style="height:40px;">
-              <span class="input-group-btn">
-                  <button class="btn btn-blue" type="button" style="margin-top:0;">Get Answers</button>
-              </span>
+          <div id="top-get-ans-section">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="new-email-input-container center">
+                <input type="text" placeholder="Enter your email" />
+                <div class="new-get-started-btn">Get Answers</div>
+              </div>
+        
             </div>
           </div>
+        </div>
           <h6 class="text-center">Join the other 2,184 people who love Perfiqt! </h6>
         </div>
       </div>
