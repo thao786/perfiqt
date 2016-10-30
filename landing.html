@@ -11,6 +11,7 @@
 
     <script src="jquery.js"></script>
     <script src="jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>Perfiqt Homepage</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="landingstyle.css" rel="stylesheet">
@@ -35,7 +36,7 @@
               </ul>
         </div>
         <div class="col-sm-2">
-          <button type="button" class="btn btn-primary btn-sm outline" style="padding: 0 27px; margin-top:-3px;">SIGN UP</button>
+          <button type="button" class="btn btn-primary btn-sm outline" style="padding: 0 27px; margin-top:-3px;" data-toggle="modal" data-target="#signUpModal">SIGN UP</button>
         </div>
       </div>
 
@@ -71,19 +72,19 @@
               <img src="imag/get1.png" width="120"><br>
               <h3>Make Smarter Decisions</h3><br>
               <h6 class="text-primary">Without the right information you are just guessing. are you on the right track in life? Are you sure? What if you're not? </h6><br>
-              <h3 class="text-info">Perfiqt gives answers</h3>
+              <h3 class="text-blue">Perfiqt gives answers</h3>
             </div>
             <div class="col-sm-4">
               <img src="imag/get2.png" width="120"><br>
               <h3>Avoid Problems</h3><br>
               <h6 class="text-primary">Following someone else's advice may make you miss out your life. What's good for some may be bad for you.</h6><br>
-              <h3 class="text-danger">Perfiqt is personal</h3>
+              <h3 class="text-red">Perfiqt is personal</h3>
             </div>
             <div class="col-sm-4">
               <img src="imag/get3.png" width="120"><br>
               <h3>Get In Control</h3><br>
               <h6 class="text-primary">Stop depending on <experts> to tell you what to do in life. With the right information you can be your own advisor.</h6><br>
-              <h3 class="text-warning">Perfiqt puts you in charge</h3>
+              <h3 class="text-yellow">Perfiqt puts you in charge</h3>
             </div>
           </div>
         </div>
@@ -95,15 +96,15 @@
       <hr><br>
       <div class="row waydiv">
         <div class="col-sm-6 col-sm-offset-1">
-          <h3 class="text-danger text-center">Old way</h3>
-      		<h6 class="text-danger text-center">Confusing. Time consuming. Intimidating.<br>
+          <h3 class="text-red text-center">Old way</h3>
+      		<h6 class="text-red text-center">Confusing. Time consuming. Intimidating.<br>
       		Many (often contradicting) answers, all depended on who you ask.</h6>
           <br><br>
       		<img src="imag/oldway.png" class="img-responsive">
         </div>
         <div class="col-sm-4">
-          <h3 class="text-primary text-center">New Way</h3>
-      		<h6 class="text-primary text-center">Personal answer.<br>
+          <h3 class="text-blue text-center">New Way</h3>
+      		<h6 class="text-blue text-center">Personal answer.<br>
       		Fast. Easy. Free</h6>
           <br><br>
       		<img src="imag/newway.png" class="img-responsive">
@@ -178,21 +179,21 @@
           <p class="text-center text-primary">A team of great professionals built revolutionary artificial intelligence for financial advisors... but decided to bring it directly to consumers instead.</p>
           <br><br>
 
-          <p class="text-center">
-            <img src="team/Adamo_D.jpg" class="boardMember" name="Adamo De Napoli" job="Financial Advisor">
-            <img src="team/Eric_D.jpg" class="boardMember" name="Eric D" job="Lawyer">
-            <img src="team/Jacen_C.jpg" class="boardMember" name="Jacen C" job="Software Developer">
-            <img src="team/Michael_V.jpg" class="boardMember" name="Michael V" job="Financial Advisor">
-            <img src="team/Ralph_N.jpg" class="boardMember" name="Ralph N" job="Cook">
-            <img src="team/Bill_A.jpg" class="boardMember" name="Bill A" job="Legal Expert">
-            <img src="team/Gene_K.jpg" class="boardMember" name="Gene K" job="Investment Banker">
-            <img src="team/JeanRene_A.jpg" class="boardMember" name="Jean Rene A" job="CEO">
-            <img src="team/Mike_A.jpg" class="boardMember" name="Mike A" job="President">
-            <img src="team/Yannik_S.jpg" class="boardMember" name="Yannik S" job="Assistant">
-            <img src="team/Bruno_R.jpg" class="boardMember"name="Bruno R" job="Pirate">
-            <img src="team/Guillaume_P.jpg" class="boardMember" name="Guillaume P" job="Supply Chain">
-            <img src="team/Jimmy_B.jpg" class="boardMember" name="Jimmy B" job="Chief Operating Officer">
-            <img src="team/Paul_G.jpg" class="boardMember" name="Paul G" job="Juggler">
+          <p id="advisorList" class="text-center">
+            <img src="team/Adamo_D.jpg" index="0" class="boardMember" name="Adamo De Napoli" job="Financial Advisor" style="opacity: 1;">
+            <img src="team/Eric_D.jpg" index="1" class="boardMember" name="Eric D" job="Lawyer">
+            <img src="team/Jacen_C.jpg" index="2" class="boardMember" name="Jacen C" job="Software Developer">
+            <img src="team/Michael_V.jpg" index="3" class="boardMember" name="Michael V" job="Financial Advisor">
+            <img src="team/Ralph_N.jpg" index="4" class="boardMember" name="Ralph N" job="Cook">
+            <img src="team/Bill_A.jpg" index="5" class="boardMember" name="Bill A" job="Legal Expert">
+            <img src="team/Gene_K.jpg" index="6" class="boardMember" name="Gene K" job="Investment Banker">
+            <img src="team/JeanRene_A.jpg" index="7" class="boardMember" name="Jean Rene A" job="CEO">
+            <img src="team/Mike_A.jpg" index="8" class="boardMember" name="Mike A" job="President">
+            <img src="team/Yannik_S.jpg" index="9" class="boardMember" name="Yannik S" job="Assistant">
+            <img src="team/Bruno_R.jpg" index="10" class="boardMember"name="Bruno R" job="Pirate">
+            <img src="team/Guillaume_P.jpg" index="11" class="boardMember" name="Guillaume P" job="Supply Chain">
+            <img src="team/Jimmy_B.jpg" index="12" class="boardMember" name="Jimmy B" job="Chief Operating Officer">
+            <img src="team/Paul_G.jpg" index="13" class="boardMember" name="Paul G" job="Juggler">
           </p>
         </div>
       </div>
@@ -204,9 +205,9 @@
           <div id="teamInfo" class="row rowQuestion2">
             <h2 class="text-center member-name">Adamo De Napoli</h1><br>
             <h3 class="text-center text-primary member-job">Financial Advisor</h2>
-              <span class="quesnum2 glyphicon glyphicon-chevron-left" aria-hidden="true" style="position: absolute;
+              <span class="quesnum2 glyphicon glyphicon-chevron-left start-btn" aria-hidden="true" style="position: absolute;
     right: 96%; top: 8%;"></span>
-              <span class="quesnum2 glyphicon glyphicon-chevron-right" aria-hidden="true" style="position: absolute;
+              <span class="quesnum2 glyphicon glyphicon-chevron-right start-btn" aria-hidden="true" style="position: absolute;
     left: 96%; top: 8%;"></span>
           </div>
 
@@ -392,7 +393,8 @@ $("#nextQuestion").click(function() {
   });
 });
 
-$(".boardMember").hover(function() {
+$("#advisorList img").hover(function() {
+    currentAdvisor = $(this).attr('index');
     $( ".boardMember" ).css('opacity', '0.5');
     $( this ).css('opacity', '1');
 
@@ -460,6 +462,50 @@ $("#milestone").hover(function(event) {
     function() {
       $("#dateInfo").html('Hover to find out more about each dates');
 });
+
+var currentAdvisor = 0;
+var totalAdvisors = $(".boardMember").length;
+
+$(".glyphicon-chevron-left").click(function() {
+  currentAdvisor = (currentAdvisor + 12) % totalAdvisors;
+  advisorImg= $(".boardMember").eq(currentAdvisor);
+  $(".boardMember").css('opacity', '0.5');
+  advisorImg.css('opacity', '1');
+  $("#teamInfo .member-name").html(advisorImg.attr('name'));
+  $("#teamInfo .member-job").html(advisorImg.attr('job'));
+});
+
+$(".glyphicon-chevron-right").click(function() {
+  currentAdvisor = (currentAdvisor + 1) % totalAdvisors;
+  advisorImg= $(".boardMember").eq(currentAdvisor);
+  $(".boardMember").css('opacity', '0.5');
+  advisorImg.css('opacity', '1');
+  $("#teamInfo .member-name").html(advisorImg.attr('name'));
+  $("#teamInfo .member-job").html(advisorImg.attr('job'));
+});
 </script>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>

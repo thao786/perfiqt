@@ -1,6 +1,8 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600';
 
-
+body {
+  color: #2e2e7f;
+}
 h2,h4,h5,p{
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
@@ -112,3 +114,21 @@ h6{
     height: 100px;
     background: #ccc;
   }
+.text-red {
+  color: #fb7b7b;
+}
+.text-yellow {
+    color: #ffde7e;
+}
+.text-blue {
+    color: #7eb5de;
+}
+.h2, h2 {
+    font-size: 30px;
+}
+.h3, h3 {
+    font-size: 24px;
+}
+.start-btn {
+    cursor: pointer;
+}
