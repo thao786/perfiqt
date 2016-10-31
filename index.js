@@ -96,8 +96,8 @@ $(function(){
 			el.before( el.clone(true) ).remove();
 		}
 		else{
-			$('#signUpModal').modal('show');
-			$('#signUpModal .email').val($('#topEmail').val());
+			$('#logInModal').modal('show');
+			$('#logInModal .email').val($('#topEmail').val());
 		}
 	});
 	
