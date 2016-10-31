@@ -356,131 +356,146 @@
 
       <footer class="footer landingfoot">
         <br><br>
-        <h1 class="text-center">Get answers now!</h1>
+        <h4 class="text-center">Sign up and get answers to your questions!</h4>
+        <p class="text-center welcome-family">... and welcome to the family :-)</p>
         <br><br>
         <div class="row">
-          <div class="col-sm-8 col-sm-offset-2">
-            <div class="row">
-              <div class="col-sm-6">
-                <h6>Save yourself some typing</h6>
-                <button class="btn btn-block btn-primary">Sign up using Facebook</button>
-                <button class="btn btn-block btn-danger">Sign up using Google account</button>
-              </div>
-              <div class="col-sm-6">
-                <form class="footform">
-                  <input type="email" class="form-control" id="email" placeholder="Email">
-                  <input type="password" class="form-control" id="pwd" placeholder="Password">
-                  <button type="submit" class="btn btn-info btn-block">Get started</button>
-                </form>
-                <br>
-                <p>Already have an account? <a href="">Log In</a></p>
+            <div class="col-sm-3"></div>
+            <div class="col-sm-8"><h6 style="font-size: 10px;">Save yourself some typing</h6></div></div>
+
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-8">
+
+              <div class="row">
+                <div class="col-sm-4">
+                  
+                  <button class="btn btn-block btn-primary">Sign up using Facebook</button>
+                  <button class="btn btn-block btn-danger">Sign up using Google account</button>
+                </div>
+                <div class="col-sm-4">
+                  <form class="footform">
+                    <input type="email" class="form-control email" id="email" placeholder="Email">
+                    <p style="font-size: 10px;"><br>
+                        You don't like spams, we don't like spam. <br>
+                        Great, nobody here likes spam :-)
+                    </p>
+                    <input type="password" class="form-control" id="pwd" placeholder="Password">
+                    <button type="submit" class="btn btn-primary btn-block">Get started</button>
+                  </form>
+                  <br>
+                  <p style="font-size: 10px;">Already have an account? <a class="start-btn" data-toggle="modal" data-target="#logInModal">Log In</a></p>
+                </div>
               </div>
             </div>
-          </div>
         </div>
 
+        
         <br><br>
 
         <div class="row">
-          <div class="col-sm-4 col-sm-offset-4">
-            <div class="testifoot">
+          <div class="col-sm-3 col-sm-offset-5">
+            <div class="testifoot" >
               <img src="imag/cap.png" width="60" style="float:left; position:absolute; right:90%; top:20%">
-              <p style="padding-left:55px;"> A team of great professionals built revolutionary artificial intelligence for financial advisors... <br><br>but decided to bring it directly to consumers instead.</p>
+              <p style="padding:10px 30px; color: white; font-weight: bold;"> 2.240 people are already using Perfiqt, now it's your turn. <br><br>
+              << Not sure where I'd be today with Perfiqt, Love it!>>
             </div>
-            <p class="text-center">or</p>
-            <button class="btn btn-block btn-info">Contact us</button>
+            <p class="text-center" style="position:relative; top: 5px;">
+                <hr style="height:3px;border:none;color:#d7d7d7;background-color:#d7d7d7;">
+                <span style="position: relative; top: -33px; left: 130px; margin: 25px;">or</span></p>
+            <button class="btn btn-block btn-primary">Contact us</button>
           </div>
         </div>
 
         <br><br>
 
-        <p class="text-center">&copy Perfiqt 2016. All rights reserved.</p>
+        <p class="text-center" style="color: #0387c9;">&copy Perfiqt 2016. All rights reserved.</p>
         <br>
       </footer>
 
 <script type="text/javascript">
-var currentQuestion = 0;
-var totalQuestions = $('.rowQuestion').length;
+  var currentQuestion = 0;
+  var totalQuestions = $('.rowQuestion').length;
 
-$("#nextQuestion").click(function() {
-  $("#nextQuestion").prop('disabled', true);
-  $( "#q" + currentQuestion).fadeOut();
-  currentQuestion = (currentQuestion + 1) % totalQuestions;
-  $('.rowQuestion').hide();
-  $( "#q" + currentQuestion).fadeIn(1500, 'linear', function() {
-    $("#nextQuestion").prop('disabled', false);
-  });
-});
-
-$("#advisorList img").hover(function() {
-    currentAdvisor = $(this).attr('index');
-    $( ".boardMember" ).css('opacity', '0.5');
-    $( this ).css('opacity', '1');
-
-    $("#teamInfo .member-name").html($(this).attr('name'));
-    $("#teamInfo .member-job").html($(this).attr('job'));
-});
-
-$(".moptionbox").hover(function() {
-      $( this ).html('<h4><b>'+ $( this ).attr('answer') + '</b></h4>');
-    }, 
-    function() {
-      $( this ).html('<h4><b>'+ $( this ).attr('question') + '</b></h4>');
-});
-
-$(".quesbox").click(function() {
-  $( this ).fadeOut( "fast", function() {
-    $( this ).fadeIn( "fast", function() {
-      if ($( this ).attr("class").indexOf('correct') < 0) {
-        $( this ).find( '.quesnum' ).css("background-color", "#c9302c");
-        $( this ).find( '.quesnum' ).html("x");
-      } else {
-        $( this ).find( '.quesnum' ).css("background-color", "green");
-        $( this ).find( '.quesnum' ).html("V");
-      }
+  $("#nextQuestion").click(function() {
+    $("#nextQuestion").prop('disabled', true);
+    $( "#q" + currentQuestion).fadeOut();
+    currentQuestion = (currentQuestion + 1) % totalQuestions;
+    $('.rowQuestion').hide();
+    $( "#q" + currentQuestion).fadeIn(1500, 'linear', function() {
+      $("#nextQuestion").prop('disabled', false);
     });
   });
-});
 
-$(".moptionbox").hover(function() {}, 
-    function() {
-      $( this ).html('<h4><b>'+ $( this ).attr('question') + '</b></h4>');
-});
-
-$(".quesbox").hover(function() {
-      $( this ).css('opacity', '0.5');
-    }, 
-    function() {
+  $("#advisorList img").hover(function() {
+      currentAdvisor = $(this).attr('index');
+      $( ".boardMember" ).css('opacity', '0.5');
       $( this ).css('opacity', '1');
-});
 
-$("#milestone img").hover(function(event) {
-      $("#dateInfo").html($( this ).attr('info'));
-    }, 
-    function() {
-      $("#dateInfo").html('Hover to find out more about each dates');
-});
+      $("#teamInfo .member-name").html($(this).attr('name'));
+      $("#teamInfo .member-job").html($(this).attr('job'));
+  });
 
-var currentAdvisor = 0;
-var totalAdvisors = $(".boardMember").length;
+  $(".moptionbox").hover(function() {
+        $( this ).html('<h4><b>'+ $( this ).attr('answer') + '</b></h4>');
+      }, 
+      function() {
+        $( this ).html('<h4><b>'+ $( this ).attr('question') + '</b></h4>');
+  });
 
-$(".glyphicon-chevron-left").click(function() {
-  currentAdvisor = (currentAdvisor -1 + totalAdvisors) % totalAdvisors;
-  advisorImg= $(".boardMember").eq(currentAdvisor);
-  $(".boardMember").css('opacity', '0.5');
-  advisorImg.css('opacity', '1');
-  $("#teamInfo .member-name").html(advisorImg.attr('name'));
-  $("#teamInfo .member-job").html(advisorImg.attr('job'));
-});
+  $(".quesbox").click(function() {
+    $( this ).fadeOut( "fast", function() {
+      $( this ).fadeIn( "fast", function() {
+        if ($( this ).attr("class").indexOf('correct') < 0) {
+          $( this ).find( '.quesnum' ).css("background-color", "#c9302c");
+          $( this ).find( '.quesnum' ).html("x");
+        } else {
+          $( this ).find( '.quesnum' ).css("background-color", "green");
+          $( this ).find( '.quesnum' ).html("V");
+        }
+      });
+    });
+  });
 
-$(".glyphicon-chevron-right").click(function() {
-  currentAdvisor = (currentAdvisor + 1) % totalAdvisors;
-  advisorImg= $(".boardMember").eq(currentAdvisor);
-  $(".boardMember").css('opacity', '0.5');
-  advisorImg.css('opacity', '1');
-  $("#teamInfo .member-name").html(advisorImg.attr('name'));
-  $("#teamInfo .member-job").html(advisorImg.attr('job'));
-});
+  $(".moptionbox").hover(function() {}, 
+      function() {
+        $( this ).html('<h4><b>'+ $( this ).attr('question') + '</b></h4>');
+  });
+
+  $(".quesbox").hover(function() {
+        $( this ).css('opacity', '0.5');
+      }, 
+      function() {
+        $( this ).css('opacity', '1');
+  });
+
+  $("#milestone img").hover(function(event) {
+        $("#dateInfo").html($( this ).attr('info'));
+      }, 
+      function() {
+        $("#dateInfo").html('Hover to find out more about each dates');
+  });
+
+  var currentAdvisor = 0;
+  var totalAdvisors = $(".boardMember").length;
+
+  $(".glyphicon-chevron-left").click(function() {
+    currentAdvisor = (currentAdvisor -1 + totalAdvisors) % totalAdvisors;
+    advisorImg= $(".boardMember").eq(currentAdvisor);
+    $(".boardMember").css('opacity', '0.5');
+    advisorImg.css('opacity', '1');
+    $("#teamInfo .member-name").html(advisorImg.attr('name'));
+    $("#teamInfo .member-job").html(advisorImg.attr('job'));
+  });
+
+  $(".glyphicon-chevron-right").click(function() {
+    currentAdvisor = (currentAdvisor + 1) % totalAdvisors;
+    advisorImg= $(".boardMember").eq(currentAdvisor);
+    $(".boardMember").css('opacity', '0.5');
+    advisorImg.css('opacity', '1');
+    $("#teamInfo .member-name").html(advisorImg.attr('name'));
+    $("#teamInfo .member-job").html(advisorImg.attr('job'));
+  });
 </script>
 
 

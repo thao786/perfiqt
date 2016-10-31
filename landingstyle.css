@@ -461,8 +461,7 @@ h6{
   color:white;
 }
 .landingfoot{
-  color:white;
-  background-color: #46586c;
+  background-color: #fcfcfc;
   background-image: url("imag/6.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -475,7 +474,7 @@ h6{
   color:#7294b0;
 }
 .testifoot{
-  background-color: #4e657c;
+  background-color: #fe7b79;
   padding:20px;
   border-radius: 10px;
 }
@@ -544,7 +543,8 @@ h6{
   top: -40px;
   left: -240px;
 }
-.modal-header p {
+
+.modal-header p, .welcome-family {
   font-size: 12px; 
   color: gray; 
   font-weight: bold; 
