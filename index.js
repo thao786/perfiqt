@@ -97,6 +97,7 @@ $(function(){
 		}
 		else{
 			$('#signUpModal').modal('show');
+			$('#signUpModal .email').val($('#topEmail').val());
 		}
 	});
 	
